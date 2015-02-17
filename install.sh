@@ -24,7 +24,7 @@ OE_HOME_EXT="/opt/$OE_USER/$OE_USER-server"
 #Enter version for checkout "8.0" for version 8.0, "7.0 (version 7), saas-4, saas-5 (opendays version) and "master" for trunk
 OE_VERSION="8.0"
 #set the superadmin password
-OE_SUPERADMIN="techorg@2015"
+OE_SUPERADMIN="admin"
 OE_CONFIG="$OE_USER-server"
 #--------------------------------------------------
 # Update Server
