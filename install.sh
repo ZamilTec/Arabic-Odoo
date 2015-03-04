@@ -77,8 +77,8 @@ sudo su $OE_USER -c "mkdir $OE_HOME/custom"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom/addons"
 echo -e "\n---- install custom  addons----"
 sudo git clone https://github.com/barsi/odoo-rtl $OE_HOME/custom/addons
-sudo rm LICENSE
-sudo rm README.md
+sudo rm $OE_HOME/custom/addons/LICENSE
+sudo rm $OE_HOME/custom/addons/README.md
 echo -e "\n---- Setting permissions on home folder ----"
 sudo chown -R $OE_USER:$OE_USER $OE_HOME/*
 echo -e "* Create server config file"
