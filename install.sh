@@ -175,4 +175,9 @@ sudo chown root: /etc/init.d/$OE_CONFIG
 echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 sudo service $OE_CONFIG start
-echo "Done! The ODOO server can be started with: service $OE_CONFIG start"
+echo "The ODOO server can be started with: service $OE_CONFIG start"
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8069
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8070
+sudo iptables-save
+echo "Done!"
+
