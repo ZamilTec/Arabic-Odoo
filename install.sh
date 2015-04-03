@@ -56,6 +56,13 @@ sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
 sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
 sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 
+#echo -e "\n---- Install wkhtml 12.2 and place on correct place for ODOO 8 ----"
+#sudo apt-get install -f
+#sudo wget http://sourceforge.net/projects/wkhtmltopdf/files/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+#sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+#sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
+#sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
+
 #echo -e "\n---- Install wkhtml 32 and place on correct place for ODOO 8 ----"
 #sudo wget http://downloads.sourceforge.net/project/wkhtmltopdf/archive/0.12.1/wkhtmltox-0.12.1_linux-trusty-i386.deb
 #sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-i386.deb
