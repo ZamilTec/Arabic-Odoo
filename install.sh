@@ -86,6 +86,7 @@ echo -e "\n---- install custom  addons----"
 sudo git clone https://github.com/barsi/odoo-rtl $OE_HOME/custom/addons
 sudo rm $OE_HOME/custom/addons/LICENSE
 sudo rm $OE_HOME/custom/addons/README.md
+sudo git clone https://github.com/ZamilTec/OdooHideBar $OE_HOME/custom/addons
 echo -e "\n---- Setting permissions on home folder ----"
 sudo chown -R $OE_USER:$OE_USER $OE_HOME/*
 echo -e "* Create server config file"
