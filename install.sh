@@ -55,6 +55,7 @@ sudo wget http://downloads.sourceforge.net/project/wkhtmltopdf/archive/0.12.1/wk
 sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
 sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
 sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
+sudo rm wkhtmltox-0.12.1_linux-trusty-amd64.deb
 
 #echo -e "\n---- Install wkhtml 12.2 and place on correct place for ODOO 8 ----"
 #sudo apt-get install -f
@@ -86,7 +87,8 @@ echo -e "\n---- install custom  addons----"
 sudo git clone https://github.com/barsi/odoo-rtl $OE_HOME/custom/addons
 sudo rm $OE_HOME/custom/addons/LICENSE
 sudo rm $OE_HOME/custom/addons/README.md
-sudo git clone https://github.com/ZamilTec/OdooHideBar $OE_HOME/custom/addons
+cd  $OE_HOME/custom/addons/
+sudo git clone https://github.com/ZamilTec/OdooHideBar
 echo -e "\n---- Setting permissions on home folder ----"
 sudo chown -R $OE_USER:$OE_USER $OE_HOME/*
 echo -e "* Create server config file"
