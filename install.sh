@@ -84,11 +84,11 @@ echo -e "\n---- Create custom module directory ----"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom/addons"
 echo -e "\n---- install custom  addons----"
+cd  $OE_HOME/custom/addons/
 sudo git clone https://github.com/barsi/odoo-rtl $OE_HOME/custom/addons
 sudo rm $OE_HOME/custom/addons/LICENSE
 sudo rm $OE_HOME/custom/addons/README.md
-cd  $OE_HOME/custom/addons/
-sudo git clone https://github.com/ZamilTec/OdooHideBar
+sudo git clone https://github.com/ZamilTec/OdooHideBar $OE_HOME/custom/addons/OdooHideBar
 echo -e "\n---- Setting permissions on home folder ----"
 sudo chown -R $OE_USER:$OE_USER $OE_HOME/*
 echo -e "* Create server config file"
