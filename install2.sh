@@ -76,6 +76,9 @@ sudo apt-get install ssh -y
 echo -e "\n---- Install tool packages ----"
 sudo apt-get install wget subversion git bzr bzrtools python-pip -y
 
+sudo apt-get install gcc -y
+sudo apt-get install python-dateutil python-docutils python-feedparser python-gdata python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psycopg2 python-psutil python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi -y
+
 echo -e "\n---- Install and Upgrade pip and virtualenv ----"
 sudo apt-get install python-dev build-essential -y
 sudo pip install --upgrade pip
