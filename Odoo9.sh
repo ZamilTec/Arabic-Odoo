@@ -61,6 +61,11 @@ sudo apt-get install node-less -y
 sudo apt-get install python-gevent -y
 
 echo -e "\n---- Install wkhtml and place on correct place for ODOO  ----"
+sudo apt-get install fontconfig
+sudo apt-get install libjpeg-turbo8
+sudo apt-get install xfonts-base
+sudo apt-get install xfonts-75dpi
+
 #sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
 sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2/wkhtmltox-0.12.2_linux-trusty-amd64.deb
 sudo dpkg -i wkhtmltox-0.12.2_linux-trusty-amd64.deb
