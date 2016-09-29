@@ -1,0 +1,18 @@
+sudo apt-get install nginx
+sudo nano /etc/nginx/sites-enabled/default
+
+location / {
+proxy_pass http://127.0.0.1:8069;
+proxy_redirect off;
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto $scheme;
+
+
+sudo nano /etc/odoo-server.conf
+xmlrpc_interface = 127.0.0.1
+
+
+sudo service odoo-server restart
+sudo service nginx restart
