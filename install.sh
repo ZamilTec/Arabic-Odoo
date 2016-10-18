@@ -87,10 +87,19 @@ sudo su $OE_USER -c "mkdir $OE_HOME/custom"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom/addons"
 echo -e "\n---- install custom  addons----"
 cd  $OE_HOME/custom/addons/
-sudo git clone https://github.com/barsi/odoo-rtl $OE_HOME/custom/addons
+sudo git clone --branch $OE_VERSION https://github.com/barsi/odoo-rtl $OE_HOME/custom/addons
 sudo rm $OE_HOME/custom/addons/LICENSE
 sudo rm $OE_HOME/custom/addons/README.md
 sudo git clone https://github.com/ZamilTec/OdooHideBar $OE_HOME/custom/addons/OdooHideBar
+
+echo -e "\n---- Setting barcode fonts ----"
+sudo mkdir /usr/lib/python2.7/dist-packages/reportlab/fonts/
+cd /usr/lib/python2.7/dist-packages/reportlab/fonts/
+sudo wget http://www.reportlab.com/ftp/pfbfer.zip
+sudo apt-get install unzip  -y
+sudo unzip pfbfer.zip -d /usr/lib/python2.7/dist-packages/reportlab/fonts/ 
+cd  $OE_HOME/
+
 echo -e "\n---- Setting permissions on home folder ----"
 sudo chown -R $OE_USER:$OE_USER $OE_HOME/*
 echo -e "* Create server config file"
