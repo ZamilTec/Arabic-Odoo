@@ -111,9 +111,9 @@ sudo sed -i s/"db_user = .*"/"db_user = $OE_USER"/g /etc/$OE_CONFIG.conf
 sudo sed -i s/"; admin_passwd.*"/"admin_passwd = $OE_SUPERADMIN"/g /etc/$OE_CONFIG.conf
 sudo su root -c "echo 'logfile = /var/log/$OE_USER/$OE_CONFIG$1.log' >> /etc/$OE_CONFIG.conf"
 sudo su root -c "echo 'addons_path=$OE_HOME_EXT/addons,$OE_HOME/custom/addons' >> /etc/$OE_CONFIG.conf"
-sudo su root -c "echo '# Maximum allowed virtual memory per worker (default 671088640 aka 640MB)' >> /etc/$OE_CONFIG.conf"
+sudo su root -c "echo ';# Maximum allowed virtual memory per worker (default 671088640 aka 640MB)' >> /etc/$OE_CONFIG.conf"
 sudo su root -c "echo 'limit_memory_soft = 671088640' >> /etc/$OE_CONFIG.conf"
-sudo su root -c "echo '# Maximum allowed virtual memory per worker, when reached, any memory allocation will fail (default 805306368 aka 768MB)' >> /etc/$OE_CONFIG.conf"
+sudo su root -c "echo ';# Maximum allowed virtual memory per worker, when reached, any memory allocation will fail (default 805306368 aka 768MB)' >> /etc/$OE_CONFIG.conf"
 sudo su root -c "echo 'limit_memory_hard = 805306368' >> /etc/$OE_CONFIG.conf"
 echo -e "* Create startup file"
 sudo su root -c "echo '#!/bin/sh' >> $OE_HOME_EXT/start.sh"
