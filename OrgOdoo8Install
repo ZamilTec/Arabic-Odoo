@@ -10,3 +10,15 @@ sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
 sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 sudo rm wkhtmltox-0.12.1_linux-trusty-amd64.deb
 
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8069
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8070
+sudo iptables-save
+echo "Done!"
+
+echo -e "\n---- Setting barcode fonts ----"
+sudo mkdir /usr/lib/python2.7/dist-packages/reportlab/fonts/
+cd /usr/lib/python2.7/dist-packages/reportlab/fonts/
+sudo wget http://www.reportlab.com/ftp/pfbfer.zip
+sudo apt-get install unzip  -y
+sudo unzip pfbfer.zip -d /usr/lib/python2.7/dist-packages/reportlab/fonts/
+sudo chmod 777 -R /usr/lib/python2.7/dist-packages/reportlab/fonts/
