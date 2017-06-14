@@ -16,6 +16,8 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-p
 sudo iptables-save
 echo "Done!"
 
+sudo apt-get install  python-xlrd
+
 echo -e "\n---- Setting barcode fonts ----"
 sudo mkdir /usr/lib/python2.7/dist-packages/reportlab/fonts/
 cd /usr/lib/python2.7/dist-packages/reportlab/fonts/
