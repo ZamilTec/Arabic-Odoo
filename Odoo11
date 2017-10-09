@@ -1,0 +1,16 @@
+wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python-pyldap/python3-pyldap_2.4.25.1-2ubuntu1_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python-qrcode/python3-qrcode_5.3-1_all.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python-vobject/python3-vobject_0.9.3-3_all.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python-dateutil/python3-dateutil_2.5.3-2_all.deb
+sudo dpkg -i python3-pyldap_2.4.25.1-2ubuntu1_amd64.deb python3-qrcode_5.3-1_all.deb python3-vobject_0.9.3-3_all.deb python3-dateutil_2.5.3-2_all.deb
+
+wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -
+sudo echo "deb http://nightly.odoo.com/11.0/nightly/deb/ ./" >> /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get install odoo
+
+wget https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo apt dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
+cp -p / usr / local / bin / wkhtmlto * / usr / bin /
+
+sudo apt-get install  python-xlrd
