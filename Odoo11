@@ -10,7 +10,9 @@ sudo apt-get update
 sudo apt-get install odoo
 
 wget https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
-sudo apt dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
-cp -p / usr / local / bin / wkhtmlto * / usr / bin /
+sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
+sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
+sudo rm wkhtmltox-0.12.1_linux-trusty-amd64.deb
 
 sudo apt-get install  python-xlrd
